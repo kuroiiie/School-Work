@@ -1,0 +1,57 @@
+<!--Chloe Jiang
+Helped by Alex Swift -->
+
+<html>
+
+<head>
+    <title>Fruits</title>
+</head>
+    
+<body>
+    
+    <p>
+        <div id = 0></div>
+        <div id = 1></div>
+        <div id = 2></div>
+    </p>
+    
+   <!-- <a id="grapequantity"></a> 
+    <a id="grapekind"></a><br>
+    <a id="kiwiquantity"></a> 
+    <a id="kiwikind"></a><br>
+    <a id="bananaquantity"></a> 
+    <a id="bananakind"></a> -->
+    
+    <script type="text/javascript">
+        var fruits = [
+            {
+                kind: "grape",
+                color: "red",
+                quantity: 12,
+                tasty: true
+            },
+            {
+                kind: "kiwi",
+                color: "brown",
+                quantity: 98,
+                tasty: true
+            },
+            {
+                kind: "banana",
+                color: "yellow",
+                quantity: 0,
+                tasty: true
+            }
+        ];
+        for(var i = 0; i < fruits.length; i++){
+            var fruit = fruits[i];
+            document.getElementById(i).innerHTML = fruit.quantity + " " + fruit.kind;
+            document.getElementById(i).style.color= fruit.color;
+            document.getElementById(i).style.backgroundColor = "gray";
+                                     
+        }
+    </script>
+
+</body>
+
+</html>
