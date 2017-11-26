@@ -1,0 +1,209 @@
+<html>
+	<!-- THIS IS A COMMENT. It is merely for notes in the code. It does not affect the code. -->
+
+	<!-- **********************************************
+	If you have any questions about HTML tags,	W3 Schools has an
+	excellent reference at: http://w3schools.com/tags/default.asp
+	********************************************** -->
+	
+	<!--
+		Requirements:
+		x Replace "My name is" +50
+		x Replace "My login is" +50
+		x Replace "Click me!" +50
+		x Replace "Good job!" +50
+		x Add date script +100
+		x Add two more form options +100
+		x Add two more cases in my_function +100
+		x Show two items in pull-down menu +100
+		- Align left edge of textbox to menu +100
+		x onMouseOver: pink +100
+		x onMouseOut: blue +100
+		x Replace "Place mouse.." with HW 2 Link Text +50
+		x Replace URL with HW 2 LINK +50
+		
+		x EC: Add "HI THERE" link to hw2 +100
+	
+	-->
+
+	<head>
+		<title>First Program</title>
+	</head>
+
+
+	<center>
+		<h1>My first program</h1>
+		<h3>Paula Espiritu</h3>
+		<h3>mespirit</h3>
+    
+    <script type="text/javascript">
+		var mydate= new Date()
+		var theyear=mydate.getFullYear()
+		var themonth=mydate.getMonth()+1
+		var thetoday=mydate.getDate()
+		document.write("Today's date is: ")
+		document.write(themonth+"/"+thetoday+"/"+theyear)
+		</script>
+
+	</center>
+
+	<!-- **********************************************
+	The following function will create a button on your page.  When the button is clicked, it will pop up a message.
+	To edit the text on the button, edit the text following "value".  To edit the text in the pop up message, edit the text following "alert".
+	*********************************************** -->
+
+	<script>
+		function myFunction()
+		{
+			alert("Ok, fine. You win.");
+		}
+	</script>
+
+	
+	<body>
+
+		<center>
+			<input type="button" onclick="myFunction()" value="I bet you won't click this button..." />
+		</center>
+
+		<hr> <!-- HR is command which draws a line across the screen -->
+
+		This is a simple text greetings program.  Enter a name and how to greet the person
+		then click on the "greet" button to see the result.		
+		<P>
+
+
+		<form name="MyForm">
+		
+			<b> NAME </b>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	<!-- &nbsp is a way of adding a space -->
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<!-- **********************************************
+			Creates a text box of size 25 that allows you to input the name of a person.
+			INPUT type = "text"
+			*********************************************** -->
+			<input name="name_of_person" size="25" type="text">
+
+			
+			<br> <!-- BR puts vertical space on the screen -->
+			<b> How do you feel about the person? </b>
+
+			
+			<!-- *****************************************************
+			Creates a pull-down menu of size 1 that allows you to select an option.
+			Options are listed within.  You can add more options.
+			****************************************************** -->
+			<select name="my_menu" size="2">
+				<option value="Hate_value">Hate</option>	<!-- shows word Hate in menu -->
+				<option value="Hello_value">Hello</option>	<!-- shows word Hello in menu -->
+                <option value="Hug_value">Hug</option>
+				<option value="Smack_value">Smack</option
+            </select>
+
+			
+			<pre> <!-- PRE puts pre formatted text on the screen. In this case, we are adding vertical space. -->
+
+
+
+
+			</pre>
+
+			
+			<center>
+			
+				<!-- *********************************************************
+				A button with the word greet will appear because of this call.
+				The button when pushed will call the function "my_function"
+				DO NOT MODIFY THIS
+				********************************************************** -->
+				<input name="greet_button" value="greet" onclick="this.form.the_result_of_the_greeting.value= my_function(
+				this.form.name_of_person.value,
+				this.form.my_menu.options[ this.form.my_menu.selectedIndex].value)" type="button">
+				
+				<!-- **********************************************
+				Makes a text box of size 35 which receives the
+				result of pushing the "greet" button
+				*********************************************** -->
+				<input name="the_result_of_the_greeting" size="35" type="text">
+
+
+				<pre> <!-- PRE puts pre formatted text on the screen. In this case, we are adding vertical space. -->
+
+
+				</pre>
+
+				<hr> <!-- HR is command which draws a line across the screen -->
+				
+				<a href="http://people.ucsc.edu/~mespirit/ce3/index.html" 
+					onMouseOver="document.bgColor='pink'; return true;"
+					onMouseOut="document.bgColor='blue'; return true;">
+					Look at my last assignment!
+				</a>
+				
+			</center>
+
+		</form>
+	</body>
+
+
+	<!-- LONG COMMENT ****************************************************
+	When I press the greet button, I call the following function.
+	In other words, this function runs when the greet button is pressed.
+	
+	DO NOT DELETE THIS FUNCTION
+	
+	You may modify as needed by adding to the function.
+
+	FUNCTION: 	my_function(value1, value2)
+	RESULT:  	returns a string of characters, stored in resulting_string
+	ARGUMENT1:	value1 - Takes the name of a person
+	ARGUMENT2: 	value2 - Takes the name of an operation
+	****************************************************************** -->
+	
+	<script language="javascript">
+		function my_function(value1, value2)
+		{
+			<!-- Start with an empty string called resulting_string. -->
+			var resulting_string = "";
+
+			<!-- If no name was given... -->
+			if (value1 == "")
+			{	
+				<!-- store "WHO?" in resulting_string. -->
+				resulting_string = "WHO?";
+			}
+			<!-- otherwise, if hello was selected in the menu... -->
+			else if ( value2 == "Hello_value" )
+			{
+				<!-- store "Hello There" and the person's name in resulting_string. -->
+				resulting_string = "Hello There " + value1;
+			}
+			<!-- Otherwise, if hello was selected in the menu... -->
+			else if ( value2 == "Hate_value" )
+			{	
+				<!-- store "I don't like you" and the person's name in resulting_string. -->
+				resulting_string = "I Don't Like You " + value1;
+	      	}
+			
+			<!--  2 Extra Options -->
+			else if (x == "Hug_value"){
+				resulting_string = "You are about to be hugged "+value1;
+			}
+			else if(y == "Smack_value"){
+				resulting_string = "You better run because I will smack you, "+value1;
+			}
+			
+			<!-- Otherwise, if nothing above happens... -->
+			else
+			{	
+				<!-- store "ERROR HAS OCURRED" in resulting_string (because something should have happened before this). -->
+				resulting_string = "ERROR HAS OCCURRED";
+			}
+
+			<!-- Finally, return whatever was stored in resulting_string. -->
+			return resulting_string;
+		}
+	</script>
+
+</html>
+
